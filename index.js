@@ -1,9 +1,8 @@
 const express = require('express');
 const app = express();
-const coronaData = require('./coronaData');
 
 app.get("/", (req, res) => {
-  res.send(coronaData);
+  res.sendFile(__dirname + "/index.html");
 });
 
 app.listen(5050, () => {
